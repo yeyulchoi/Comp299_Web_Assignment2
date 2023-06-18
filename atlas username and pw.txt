@@ -1,0 +1,32 @@
+MongoDB Atlas
+
+Username: yeyulchoi
+
+ password.
+
+IKNtOBgN2RZslWQj
+
+
+
+Only an IP address you add to your Access List will be able to connect to your project's clusters. You can manage existing IP entries via the Network Access Page.
+
+IP Address
+Enter IP Address
+Description
+Enter description
+
+Add My Current IP Address
+
+Add Entry
+IP Access List
+
+Description
+
+99.240.76.137/32
+
+My IP Address
+
+
+EDIT
+
+REMOVE
