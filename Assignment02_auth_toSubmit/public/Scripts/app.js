@@ -1,27 +1,6 @@
 // immediately invoked function exression
 
-// (function(){
-//     function Start()
-//     {
-//         console.log("app started..")
 
-//         let deleteButton = document.querySelectorAll('.btm-damger')
-        
-//         for(button of deleteButtons)
-//         {
-//             button.addEventListener('click',(event)=>{
-//                 if(!confirm("Are you sure"))
-//                 {
-//                     event.preventDefault();
-//                     window.location.assign('/book-list');
-//                 }
-//             });  
-//         }
-//     }
-
-
-//     window.addEventListener("load",Start);
-// })();
 
 (function () {
     function Start() {
@@ -33,7 +12,7 @@
         button.addEventListener('click', (event) => {
           if (!confirm("Are you sure?")) {
             event.preventDefault();
-            window.location.assign('/book-list');
+            window.location.assign('/biz-contact');
           }
         });
       }
@@ -41,4 +20,8 @@
   
     window.addEventListener("load", Start);
   })();
+
+
+  
+  
   
