@@ -21,20 +21,23 @@ function requireAuth(req,res,next)
 
 /* GET Route for the bizContactListModel List page - Read Operation*/
 router.get('/', async (req, res) => {
-    try {
-      let bizContactList = await BizContact.find().sort({username:1});
-      res.render('bizContactList/list', 
-      {
-         title: 'Business Contact List',
-         ContactList: bizContactList,
-         displayName : req.user ? req.user.displayName :''
-        });
-    } catch (err) {
-      console.error(err);
-      // handle the error in an appropriate way, such as sending an error response
-      res.status(500).send('Internal Server Error 1');
-    }
-  });
+  try {
+    let bizContactList = await BizContact.find().sort({ username: 1 });
+    // Rearrange names in alphabetical order
+    bizContactList.sort((a, b) => a.username.localeCompare(b.username));
+    res.render('bizContactList/list', {
+      title: 'Business Contact List',
+      ContactList: bizContactList,
+      displayName: req.user ? req.user.displayName : '',
+    });
+  } catch (err) {
+    console.error(err);
+    // handle the error in an appropriate way, such as sending an error response
+    res.status(500).send('Internal Server Error 1');
+  }
+});
+
+
  
 
  /* GET Route for displaying Add page - Create Operation*/
