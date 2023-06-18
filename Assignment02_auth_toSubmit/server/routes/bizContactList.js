@@ -22,7 +22,7 @@ function requireAuth(req,res,next)
 /* GET Route for the bizContactListModel List page - Read Operation*/
 router.get('/', async (req, res) => {
     try {
-      let bizContactList = await BizContact.find();
+      let bizContactList = await BizContact.find().sort({username:1});
       res.render('bizContactList/list', 
       {
          title: 'Business Contact List',
